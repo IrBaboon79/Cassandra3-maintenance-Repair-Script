@@ -7,21 +7,8 @@ Script is stateless; deploy and run on all servers in a similar way (via systemd
 
 Script History
 --------------
-Earlier Versions    | - History not available
-v0.2c  / 05-2021    | - Fixed a few minor bugs wr to logging & improved the handling in general
-                    | - Added check/abort on non-existing cassandra yaml & nodetool pointing to invalid configuration of the 2 variables.
-                    | - more comments                    
-  v0.2d / 07-2022   | - fixed sorting logic; it never was an issue but didn't adhere to intended operation of picking the 'lowest' IP as command node.
-                    | - some minor fixes & changes to log output; all consistent now
-  v0.2e / 08-2022   | - added a bit of weighted randomized selection of Full Repair or daily Primary Range Repair only; chance is 20% to select a full repair.
-                    | - added duration indicator on script exit
-                    | - more comments / cleaned up a bit
-  v0.2f / 08-2022   | - added additional repair-mode selection algorithm based on weeknumber
-                    | - algortihm seclectable via config flag
-  v0.2g / 08-2022   | - moved selection of Repair Mode from global to per-node
-                    | - minor optimizations, additional comments
-                    | - small adjustment for log maintainer to show actual size, additional comments
-  v0.2h / 08-2022   | - added Nodetool 'info' repair status fetch before initiating a repair action; added override to full repair if <94% repair is reported.
+See inside script file.
+  
 
 Script Explanation
 ------------------
