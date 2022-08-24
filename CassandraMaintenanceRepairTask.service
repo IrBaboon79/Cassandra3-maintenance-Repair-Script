@@ -1,0 +1,15 @@
+[Unit] 
+Description=Cassandra 3 Maintenance / Repair Task
+
+[Service] 
+Type=simple
+User=root
+Environment=TERM=xterm
+Environment=JAVA_HOME=/opt/java/RTi_java
+ExecStart=/C3Mount/Maintenance/script/casrep.sh
+
+StandardOutput=journal
+StandardError=journal
+
+[Install] 
+WantedBy=multi-user.target

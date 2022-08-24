@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Cassandra Maintenance Repair Script
+#allow manual start/stop
+RefuseManualStart=No
+RefuseManualStop=No
+
+[Timer]
+# daily @ 00:30
+OnCalendar=*-*-* 00:30:00
+# Ensure it runs even if system was down
+Persistent=true
+Unit=CassandraMaintenanceRepairTask.service
+
+[Install]
+WantedBy=timers.target
